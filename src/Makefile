@@ -12,6 +12,7 @@ _OBJ = main.o Ercsolver.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 $(OBJ): $(ODIR)/%.o: %.cpp $(DEPS)
+	@mkdir -p $(@D)
 	$(CC) -c -o $@ $< $(CPPFLAGS)
 
 ercsolver: $(OBJ)
