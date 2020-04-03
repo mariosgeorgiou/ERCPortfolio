@@ -3,7 +3,7 @@ CC = g++
 CPPFLAGS = -I. -I/usr/local/include/eigen3/ -I../include
 
 
-_DEPS = Ercsolver.h
+_DEPS = Ercsolver.h CorrelationMatrix.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
 ODIR = obj

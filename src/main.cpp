@@ -1,3 +1,4 @@
+#define EIGEN_MATRIXBASE_PLUGIN "CorrelationMatrix.h"
 #include <iostream>
 #include <Eigen/Dense>
 #include <string>
@@ -60,6 +61,10 @@ int main(int argc, char** argv)
         return 1;
     }
     MatrixXd Sigma = readMatrix(filename);
+	if (!Sigma.isCorrelationMatrix()){
+		std::cout << "It is not a correlation matrix.\n" << std::endl;
+		return 1;
+	}
     ErcSolver solver;
     VectorXd solution = solver.solve(Sigma,50);
 	std::cout << "The risk contributions are\n" << solution/solution.sum() << std::endl;
