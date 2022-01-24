@@ -1,6 +1,6 @@
 # ERC Portfolio
 
-ERC Portfolio is a C++ library for deriving equal risk distributed portfolios. It implements the cyclical coordinate descent algorithm by Griveau-Billion, Richard and Roncalli. This is the [paper](https://arxiv.org/pdf/1311.4057.pdf).
+ERC (equal risk contribution) Portfolio is a C++ library for deriving equal risk distributed portfolios. It implements the cyclical coordinate descent algorithm by Griveau-Billion, Richard and Roncalli. This is the [paper](https://arxiv.org/pdf/1311.4057.pdf).
 
 ## Installation
 
