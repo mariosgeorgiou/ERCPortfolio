@@ -2,22 +2,22 @@
 
 using namespace Eigen;
 
-class ErcSolver {
+class ErcSolver
+{
 
-	private:
-		VectorXd x; //asset weight vector
-		MatrixXd Sigma; //correlation matrix
-		int n; //number of assets
+private:
+	VectorXd x;		//asset weight vector
+	MatrixXd Sigma; //correlation matrix
+	int n;			//number of assets
 
-		double Sx(int);
+	double Sx(int);
 
-		double var(int);
+	double var(int);
 
-		double volty(); //the overall volatility
+	double volty(); //the overall volatility
 
-		void setXi(int); //one step of the coordinate descent algorithm
+	void setXi(int); //one step of the coordinate descent algorithm
 
-	public:
-		VectorXd solve(MatrixXd, int); //number of iterations
+public:
+	VectorXd solve(MatrixXd, int); //number of iterations
 };
-
