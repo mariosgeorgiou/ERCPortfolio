@@ -4,3 +4,4 @@ inline bool isCorrelationMatrix(void) const
 			this->isApprox(this->transpose()) &&
 			this->lpNorm<Infinity>() <= 1);
 }
+
